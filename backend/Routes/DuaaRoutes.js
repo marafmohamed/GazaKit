@@ -1,6 +1,8 @@
 const express=require("express")
-const {GetDuaa}=require("../Controllers/GetDuaa")
+const {GetDuaa, AddDuaa}=require("../Controllers/GetDuaa")
+const {requireAuth}=require("../requireAuth/requireAuth")
 const router=express.Router()
 
-router.route('/getDuaa').get(GetDuaa)
+router.route('/getDuaa').get(GetDuaa);
+router.route('/addDuaa').post(AddDuaa);
 module.exports=router
