@@ -6,12 +6,15 @@ const BrandModel=new schema({
         type:String,
         required:true
     },
-    pic:{
+    Pic:{
         type:String,
     },
-    zionist:{
+    Zionist:{
         type:Boolean,
         required:true
+    },
+    Field:{
+        type:String
     }
 },{timestamps:true})
 
