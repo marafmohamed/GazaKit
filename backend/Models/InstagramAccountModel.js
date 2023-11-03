@@ -14,6 +14,9 @@ const AccountModel=new schema({
     AccountUrl:{
         type:String,
         required:true
+    },
+    Platform:{
+        type:String
     }
 },{timestamps:true})
 module.exports=mongoose.model('Account',AccountModel)

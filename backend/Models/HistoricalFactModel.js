@@ -6,7 +6,7 @@ const HistoryModel=new schema({
         type:String,
         required:true
     },
-    arcticle:{
+    Arcticle:{
         type:String
     }
 

@@ -2,7 +2,7 @@ const mongoose=require("mongoose")
 const schema=mongoose.Schema
 
 const CommentModel=new schema({
-    Content:{
+    content:{
         type:String
     }
 },{timestamps:true})

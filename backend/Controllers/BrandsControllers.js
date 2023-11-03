@@ -10,15 +10,15 @@ const GetBrands=async(req,res)=>{
 }
 
 const SearchBrands=async(req,res)=>{
-    const Keyword=req.body ? {
+    const Keyword=req.query ? {
         $and:[
-            {Name: { $regex: req.body.Name, $options: "i" }},
-        {Field: { $regex: req.body.Field, $options: "i" }}     
+            {Name: { $regex: req.query.Name, $options: "i" }},
+        {Field: { $regex: req.query.Field, $options: "i" }}     
         ]
         
          } : {}
     if(!Keyword){
-        return res.status(400).json({error:"ERROR IN REQUEST BODY"});
+        return res.status(400).json({error:"ERROR IN REQUEST QUERY"});
     }
     try{
         const brands=await Brand.find(Keyword)
