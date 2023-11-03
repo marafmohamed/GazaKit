@@ -10,8 +10,8 @@ const Instructions=new schema({
    Type:String
    },
    Instructions:{
-    Type:Array,
-   }   
+      type:[String]
+   }
 },{timestamps:true})
 
 

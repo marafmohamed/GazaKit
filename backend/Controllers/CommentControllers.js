@@ -9,17 +9,16 @@ const GetComments=async(req,res)=>{
     }
 }
 
-const postComment=async(req,res)=>{
-    try{
-        const commentposted=await Comment.create(req.body)
-        res.status(200).json(commentposted)
-    }catch(err){
-        res.status(400).json({error:err.message})
-    }
-}
+// const postComment=async(req,res)=>{
+//     try{
+//         const commentposted=await Comment.create(req.body)
+//         res.status(200).json(commentposted)
+//     }catch(err){
+//         res.status(400).json({error:err.message})
+//     }
+// }
 
 
 module.exports={
     GetComments,
-    postComment
 }

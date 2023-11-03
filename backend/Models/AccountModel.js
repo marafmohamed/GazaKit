@@ -5,9 +5,6 @@ const AccountModel=new schema({
         type:String,
         required:true
     },
-    Discrition:{
-        type:String,
-    },
     Pic:{
         type:String,
     },

@@ -13,7 +13,7 @@ const SearchBrands=async(req,res)=>{
     const Keyword=req.query ? {
         $and:[
             {Name: { $regex: req.query.Name, $options: "i" }},
-        {Field: { $regex: req.query.Field, $options: "i" }}     
+            {Field: { $regex: req.query.Field, $options: "i" }}     
         ]
         
          } : {}
